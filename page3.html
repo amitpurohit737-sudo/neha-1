@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>I'm Sorry Neha ❤️</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="page3 game-on">
+
+<!-- ================= GAME ================= -->
+<section class="game" id="game" aria-label="Anger release mini-game">
+    <div class="gameIntro" id="gameIntro">
+        <div class="introChip">ARCADE SIMULATION</div>
+        <h1>ANGER RELEASE MODE</h1>
+        <p>Lock on • Fire • Build your combo</p>
+        <button id="startGame" type="button">START</button>
+    </div>
+
+    <header class="hud">
+        <div class="hud-title">⚡ NEHA FRUSTRATION MODE ⚡</div>
+        <div class="hud-level">Frustration Level: <span id="level">100</span>%</div>
+        <div class="meter"><div id="meterFill"></div></div>
+        <div class="hud-stats">
+            <span>SCORE: <b id="score">0</b></span>
+            <span>HITS: <b id="hits">0</b></span>
+        </div>
+    </header>
+
+    <div class="arena" id="arena">
+        <div class="target-wrap" id="targetWrap">
+            <div class="swing" id="swing">
+                <button class="target" id="target" type="button" aria-label="Arcade target poster. Tap to play.">
+                    <img src="my-photo.jpg" alt="Photo inside the arcade poster" draggable="false">
+                    <div id="damageOverlay" aria-hidden="true"></div>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div class="fx" id="fx"></div>
+
+    <!-- fictional handgun: aims at the pointer, kicks back on every shot -->
+    <div class="weapon" id="weapon" aria-hidden="true">
+        <div class="gun" id="gun">
+            <svg viewBox="0 0 64 150" width="64" height="150">
+                <rect x="23" y="0" width="18" height="98" rx="3" fill="#2d2d33" stroke="#6b6b75" stroke-width="1.5"/>
+                <rect x="27" y="10" width="10" height="3" fill="#111"/>
+                <rect x="26" y="30" width="12" height="22" rx="2" fill="#1a1a1f"/>
+                <rect x="21" y="92" width="22" height="58" rx="6" fill="#1b1b20" stroke="#4a4a52" stroke-width="1.5"/>
+                <path d="M41 100 h10 v14 h-10" fill="none" stroke="#4a4a52" stroke-width="3"/>
+            </svg>
+        </div>
+    </div>
+    <div class="crosshair" id="crosshair"></div>
+    <div class="weaponHud" id="weaponHud">
+        <div class="weaponHud-top"><span>ARC-9</span><b id="ammo">∞</b></div>
+        <div class="weaponHud-bar"><i></i></div>
+        <div class="weaponHud-bottom"><span>ENERGY BLASTER</span><span id="weaponStatus">READY</span></div>
+    </div>
+    <div class="hitmarker" id="hitmarker">×</div>
+    <div class="combo" id="combo">COMBO <b>0</b></div>
+    <div class="levelToast" id="levelToast">LEVEL UP</div>
+    <div class="gameComment" id="gameComment" aria-live="polite"></div>
+    <button class="sound-btn" id="soundBtn" type="button">🔊 SOUND ON</button>
+
+    <!-- shown after exactly 10 hits -->
+    <div class="verdict" id="verdict" hidden>
+        <h2>Gussa nikal gaya? ❤️</h2>
+        <p>Ab meri baat sun lo...</p>
+        <button id="continueBtn" type="button">Continue ❤️</button>
+    </div>
+</section>
+
+
+<!-- ============ FINAL APOLOGY (hidden until Continue) ============ -->
+<div class="container" id="apology" hidden>
+
+    <!-- First Sorry GIF -->
+    <div class="tenor-gif-embed"
+         data-postid="8326897"
+         data-share-method="host"
+         data-aspect-ratio="1.23333"
+         data-width="100%">
+        <a href="https://tenor.com/view/im-sorry-bow-puppy-eyes-apologize-gif-8326897">
+            Im Sorry Bow GIF
+        </a>
+        from
+        <a href="https://tenor.com/search/im+sorry-gifs">
+            Im Sorry GIFs
+        </a>
+    </div>
+
+    <!-- Second Sorry GIF -->
+    <div class="tenor-gif-embed"
+         data-postid="4019881709109600298"
+         data-share-method="host"
+         data-aspect-ratio="1"
+         data-width="100%">
+        <a href="https://tenor.com/view/sorry-apology-apologies-my-apologies-im-sorry-gif-4019881709109600298">
+            Sorry Apology GIF
+        </a>
+        from
+        <a href="https://tenor.com/search/sorry-gifs">
+            Sorry GIFs
+        </a>
+    </div>
+
+    <h2>I'm Really Sorry, Neha ❤️</h2>
+
+    <p>
+        Maine jaan-bujhkar nahi kiya tha.<br>
+        Mera intention tumhe hurt karna bilkul bhi nahi tha.
+    </p>
+
+    <p class="soft">I didn't mean to hurt you.</p>
+
+    <p class="ending">
+        Please mujhe maaf kar do, Neha. 🥺🙏
+    </p>
+
+</div>
+
+<script src="page3.js"></script>
+</body>
+</html>

@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>I'm Sorry 🥺</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <!-- FIRST SLAP GIF -->
+        <div class="tenor-gif-embed"
+             data-postid="15341787298757095067"
+             data-share-method="host"
+             data-aspect-ratio="1.33028"
+             data-width="100%">
+
+            <a href="https://tenor.com/view/slap-slap-you-slapping-beat-slap-bears-gif-15341787298757095067">
+                Slap Slap You GIF
+            </a>
+
+            from
+
+            <a href="https://tenor.com/search/slap-gifs">
+                Slap GIFs
+            </a>
+
+        </div>
+
+        <script type="text/javascript"
+                async
+                src="https://tenor.com/embed.js">
+        </script>
+
+
+        <h1 id="mainText">
+            Please maan jao na 🥺
+        </h1>
+
+        <p id="subText">
+            Mujhse galti ho gayi ❤️
+        </p>
+
+
+        <div class="btn">
+
+            <button id="yesBtn">
+                YES ❤️
+            </button>
+
+            <button id="noBtn">
+                NO 😭
+            </button>
+
+        </div>
+
+
+        <p id="counter">
+            YES clicks: 0 / 20
+        </p>
+
+    </div>
+
+
+    <script>
+
+        let yesCount = 0;
+
+        const maxClicks = 20;
+
+        const yesBtn = document.getElementById("yesBtn");
+        const noBtn = document.getElementById("noBtn");
+
+        const mainText = document.getElementById("mainText");
+        const subText = document.getElementById("subText");
+        const counter = document.getElementById("counter");
+
+
+        const messages = [
+
+            ["Please maan jao na 🥺", "Mujhse galti ho gayi ❤️"],
+
+            ["Please mujhe maaf kar do 🥺", "I'm really sorry ❤️"],
+
+            ["Mujhse naraz mat raho 😔", "Please meri baat samjho"],
+
+            ["Ek baar maan jao na 🥺", "Dil se sorry ❤️"],
+
+            ["Please forgive me 😔", "Maine jaan-bujhkar nahi kiya"],
+
+            ["Mujhe sach mein regret hai 🥺", "Please gussa mat karo"],
+
+            ["Bas ek chance de do ❤️", "Main sach mein sorry hoon"],
+
+            ["Please mujhse baat kar lo 🥺", "I really want to talk to you"],
+
+            ["Meri galti thi 😔", "Please mujhe maaf kar do"],
+
+            ["Please maan jao ❤️", "Main dobara aisa nahi karunga"],
+
+            ["Itna gussa mat ho 🥺", "Please forgive me"],
+
+            ["I'm truly sorry 😔", "Please ek baar smile kar do"],
+
+            ["Mujhe pata hai meri galti hai 🥺", "Please mujhe maaf kar do"],
+
+            ["Ek last chance please ❤️", "I really mean it"],
+
+            ["Please mujhse naraz mat raho 😔", "Dil se sorry"],
+
+            ["Mujhe tumhe hurt nahi karna tha 🥺", "Please understand me"],
+
+            ["Please maan jao ❤️", "I promise I'll do better"],
+
+            ["Bas ek baar forgive kar do 🥺", "Please"],
+
+            ["Almost maan jao na 😔❤️", "Sirf thoda sa aur"],
+
+            ["Please mujhe maaf kar do 🥺❤️", "Ab Page 2 par chalte hain"]
+        ];
+
+
+        // =========================
+        // YES BUTTON
+        // =========================
+
+        yesBtn.addEventListener("click", function () {
+
+            yesCount++;
+
+            counter.innerText =
+                "YES clicks: " + yesCount + " / 20";
+
+
+            mainText.innerText =
+                messages[yesCount - 1][0];
+
+            subText.innerText =
+                messages[yesCount - 1][1];
+
+
+            // 20 YES clicks
+            if (yesCount >= 20) {
+
+                setTimeout(function () {
+
+                    window.location.href = "page2.html";
+
+                }, 800);
+
+            }
+
+        });
+
+
+        // =========================
+        // NO BUTTON BHAAGEGA
+        // =========================
+
+        function moveNoButton() {
+
+            const buttonWidth = noBtn.offsetWidth;
+            const buttonHeight = noBtn.offsetHeight;
+
+            const maxX =
+                window.innerWidth - buttonWidth - 20;
+
+            const maxY =
+                window.innerHeight - buttonHeight - 20;
+
+
+            const randomX =
+                Math.floor(Math.random() * maxX);
+
+            const randomY =
+                Math.floor(Math.random() * maxY);
+
+
+            noBtn.style.position = "fixed";
+
+            noBtn.style.left =
+                Math.max(10, randomX) + "px";
+
+            noBtn.style.top =
+                Math.max(10, randomY) + "px";
+        }
+
+
+        // Desktop
+        noBtn.addEventListener("mouseenter", function () {
+
+            moveNoButton();
+
+        });
+
+
+        // Mobile
+        noBtn.addEventListener("touchstart", function (event) {
+
+            event.preventDefault();
+
+            moveNoButton();
+
+        });
+
+    </script>
+
+</body>
+
+</html>
